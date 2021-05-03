@@ -1,0 +1,380 @@
+html {
+    box-sizing: border-box;
+    overflow-x: hidden
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif
+}
+
+h1 {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px
+}
+
+h3 {
+    font-size: 24px
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px
+}
+
+h6 {
+    font-size: 16px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+img {
+    filter: brightness(.8) contrast(1.2);
+    border-radius: 5%;
+}
+
+p {
+    color: white;
+}
+
+.fontstyle {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 23px;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+nav,
+footer,
+header {
+    display: block
+}
+
+a {
+    background-color: transparent;
+    color: rgba(0, 170, 28, 0.747);
+}
+
+.sidebar {
+    height: 60%;
+    width: 200px;
+    color: white;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto;
+    background: rgba(61, 61, 61, 0.705);
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(0.0px);
+    -webkit-backdrop-filter: blur(0.0px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+/* sidebar float right when mobile */
+.right {
+    float: right !important
+}
+
+.block .item {
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    text-align: left;
+    border: none;
+    white-space: normal;
+    float: none;
+    outline: 0
+}
+
+.row:after,
+.row:before,
+.row-padding:after,
+.row-padding:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.grid {
+    float: left;
+    width: 100%;
+}
+
+/*body content */
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+    color: #000 !important;
+}
+
+.content {
+    background: rgb(24, 24, 24);
+}
+
+/* sidebar collapse */
+@media (min-width:993px) {
+    .hide-large {
+        display: none !important
+    }
+
+    .sidebar.collapse {
+        display: block !important
+    }
+}
+
+@media (max-width:992px) {
+    .sidebar.collapse {
+        display: none
+    }
+
+    .main {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .sourcecode {
+        display: none;
+      width: 100%; height: auto; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  @media screen and (max-width: 1250px) {
+    .aboutme, .skills, .resume {
+      display: none;
+      width: 100%; height: auto; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    .resume {
+      width: 100%; height: auto; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  @media (min-width:601px) {
+    .grid {
+        width: 33.33333%
+    }
+}
+
+/* container and panel in sidebar padding  */
+.container,
+.panel {
+    padding: 0.01em 16px
+}
+
+.panel {
+    margin: 20px;
+    word-spacing: 10px;
+    position: absolute;
+    left: -20px;
+}
+
+.aboutme {
+    height: 100%;
+    width: 300px;
+    float: left;
+    color: white;
+    overflow: auto;
+    flex-wrap: wrap;
+    text-align: center;
+    background: rgba(61, 61, 61, 0.705);
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(0.0px);
+    -webkit-backdrop-filter: blur(0.0px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+.skills {
+    height: 100%;
+    width: 200px;
+    float: right;
+    color: white; 
+    flex-wrap: wrap;
+    overflow: auto;
+    margin-top: 1rem;
+    margin-right: 5rem;
+    text-align: center;
+    background: rgba(61, 61, 61, 0.705);
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(0.0px);
+    -webkit-backdrop-filter: blur(0.0px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+.resume {
+   height: 100%;
+   width: 200px;
+   align-items: center;
+   text-align: center;
+   margin-top: 0rem;;
+   margin-left: 5rem;
+}
+
+.sourcecode {
+    height: 100%;
+    width: 155px;
+    overflow: auto;
+    border-radius: 2rem;
+    margin-left: 7rem;
+    margin-top: 2rem;
+    text-align: center;
+    background: rgba(61, 61, 61, 0.705);
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(0.0px);
+    -webkit-backdrop-filter: blur(0.0px);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.068);
+}
+
+.bottomcontent {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+}
+
+/* hover styles */
+.opacity,
+.hover-opacity:hover {
+    opacity: 0.60
+}
+
+/* font sizes */
+.tiny {
+    font-size: 10px !important
+}
+
+.small {
+    font-size: 12px !important
+}
+
+.medium {
+    font-size: 15px !important
+}
+
+.large {
+    font-size: 18px !important
+}
+
+.xlarge {
+    font-size: 24px !important
+}
+
+.xxlarge {
+    font-size: 36px !important
+}
+
+.xxxlarge {
+    font-size: 48px !important
+}
+
+.jumbo {
+    font-size: 64px !important
+}
+
+/* margin styles */
+.margin {
+    margin: 16px !important
+}
+
+.margin-top {
+    margin-top: 16px !important
+}
+
+.margin-bottom {
+    margin-bottom: 16px !important
+}
+
+.margin-left {
+    margin-left: 16px !important
+}
+
+.margin-right {
+    margin-right: 16px !important
+}
+
+.iconcursor {
+    cursor: pointer;
+}
+
+/* resume button padding */
+.padding-large {
+    padding: 12px 24px !important
+}
+
+/* resume button hover */
+.button:hover {
+    color: #000 !important;
+    background-color: #ccc !important
+}
+
+/* Colors */
+.resumecolor {
+    color: black;
+    background: rgba(0, 170, 28, 0.747);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.815);
+    backdrop-filter: blur(9.0px);
+    -webkit-backdrop-filter: blur(9.0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.iconcolor {
+    color: rgba(0, 170, 28, 0.747);
+}
